@@ -34,3 +34,10 @@ export function SearchResults({results}: SearchResultsProps) {
  * 3. Re-renders with same props
  * 4. Medium to big size
  */
+
+/**
+ * useMemo / useCallback
+ * 
+ * 1. Calculos pesados
+ * 2. Igualdade referencial (quando a gente repassa aquela informacao a um componente filho)
+ */
