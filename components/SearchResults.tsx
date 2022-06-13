@@ -5,16 +5,21 @@ interface SearchResultsProps {
         id: number;
         price: number;
         title: string;
-    }>
+    }>;
+    onAddToWishlist: (id: number) => void;
 }
 
-export function SearchResults({results}: SearchResultsProps) {
+export function SearchResults({results, onAddToWishlist}: SearchResultsProps) {
     return (
         <div>
             {
-                results.map((product, i) => {
+                results.map(product => {
                     return (
-                        <ProductItem product={product} key={i}/>
+                        <ProductItem 
+                            key={product.id}
+                            product={product}
+                            onAddToWishlist={onAddToWishlist}
+                        />
                     )
                 })
             }
